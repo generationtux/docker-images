@@ -1,12 +1,15 @@
+# NGINX
+# gentux/nginx-pagespeed
+
 FROM debian:jessie
 
 
 ENV NPS_VERSION=1.10.33.6
 ENV NGINX_VERSION=1.8.1
 
-# Dependencies 
+# Dependencies
 RUN apt-get update \
-    && apt-get install -y build-essential zlib1g-dev libpcre3 libpcre3-dev unzip wget 
+    && apt-get install -y build-essential zlib1g-dev libpcre3 libpcre3-dev unzip wget
 
 # Page Speed
 RUN cd /tmp  \
@@ -15,7 +18,7 @@ RUN cd /tmp  \
     && unzip release-${NPS_VERSION}-beta.zip \
     && cd ngx_pagespeed-release-${NPS_VERSION}-beta \
     && wget https://dl.google.com/dl/page-speed/psol/${NPS_VERSION}.tar.gz \
-    && tar -xzvf ${NPS_VERSION}.tar.gz 
+    && tar -xzvf ${NPS_VERSION}.tar.gz
 
 
 # NGNIX
@@ -34,8 +37,8 @@ RUN cd /tmp \
         --user=www-data \
         --group=www-data \
     && make \
-    && make install 
-    
+    && make install
+
 # Clean up
 RUN apt-get remove -y build-essential zlib1g-dev libpcre3-dev unzip \
     && apt-get autoremove -y \
