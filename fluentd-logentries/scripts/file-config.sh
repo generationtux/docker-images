@@ -25,16 +25,20 @@ if [ -z "$FILES_TO_COLLECT" ]; then
   exit 0
 fi
 
-for filepath in $FILES_TO_COLLECT
+for filepath in $LARAVEL_LOGS
 do
   filename=$(basename $filepath)
   cat > "/etc/fluentd-conf/files/${filename}" << EndOfMessage
 <source>
   type tail
-  format none
+  format multiline
+  format_firstline /^\[(?<time>[^ ]+ [^ ]+)\] (?<env>[^ ]+)\.(?<level>[^ ]+)\: (?<message>.*)/
+  format1 /(?<stack>.*)/
   path ${filepath}
   pos_file /etc/fluentd-conf/fluentd-${filename}.pos
   tag file.${filename}
+  read_from_head true
+  use_json true
 </source>
 EndOfMessage
 done
