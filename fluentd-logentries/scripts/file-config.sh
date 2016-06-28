@@ -38,7 +38,6 @@ do
   pos_file /etc/fluentd-conf/fluentd-${filename}.pos
   tag file.${filename}
   read_from_head true
-  use_json true
 </source>
 EndOfMessage
 done
