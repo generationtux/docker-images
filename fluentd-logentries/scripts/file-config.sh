@@ -35,7 +35,6 @@ do
   path ${filepath}
   pos_file /etc/fluentd-conf/fluentd-${filename}.pos
   tag file.${filename}
-  read_from_head true
 </source>
 EndOfMessage
 done
