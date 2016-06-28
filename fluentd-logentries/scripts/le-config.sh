@@ -8,6 +8,6 @@ fi
 
 mkdir -p /etc/logentries
 cat > "/etc/logentries/tokens.yaml" << EndOfMessage
-default:
+file:
   app: $LE_APP_TOKEN
 EndOfMessage
