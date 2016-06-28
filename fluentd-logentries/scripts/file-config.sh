@@ -21,7 +21,7 @@
 # limitations under the License.
 
 mkdir -p /etc/fluentd-conf/files
-if [ -z "$FILES_TO_COLLECT" ]; then
+if [ -z "$LARAVEL_LOGS" ]; then
   exit 0
 fi
 
