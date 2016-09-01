@@ -1,7 +1,9 @@
 # PHP Laravel (fpm)
 
 Base docker image for Laravel applications. Uses the [official PHP image](https://hub.docker.com/_/php/)
-packaged with required PHP extensions for Laravel (mcrypt & mbstring).
+packaged with required PHP extensions for Laravel (mcrypt & mbstring). Additionally xdebug is installed inorder 
+running codecoverage with phpunit.
+
 The following libraries/extensions are added as well:
 
 - pdo_mysql / mysql-client
