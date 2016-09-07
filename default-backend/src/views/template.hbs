@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+
+    <title>Generation Tux</title>
+
+    <script src="https://use.typekit.net/aka3rls.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+    <link type="text/css" href="https://generationtux.com/static/css/dist/styles-7fc46e70f7.min.css">
+    <style>
+    .maintenance-wrap {
+        margin-top: 80px;
+        border: 2px solid black;
+        padding: 0 32px 48px;
+        text-align: center;
+    }
+    .maintenance-wrap h2 {
+        font-family: brandon-grotesque,Arial,Helvetica,sans-serif;
+        font-weight: 600;
+        margin: 0;
+        color: black;
+        font-size: 31.25px;
+        line-height: 1.5;
+    }
+    .maintenance-wrap img {
+        max-width: none;
+        vertical-align: middle;
+    }
+    @media (min-width: 768px) {
+        .maintenance-wrap {
+            margin-top: 128px;
+            padding-bottom: 64px;
+        }
+    }
+
+    .logo-maintenance {
+        margin-top: -40px;
+        margin-bottom: 40px;
+        background-color: white;
+        padding: 0 0px;
+    }
+    @media (min-width: 768px) {
+        .logo-maintenance {
+            margin-bottom: 56px;
+            padding: 0 48px;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-10 col-sm-offset-1 text-center">
+                <div class="maintenance-wrap">
+                    <img class="logo-maintenance" src="https://dl.dropboxusercontent.com/u/6938731/gentux-web-assets/maintenance/logo.svg">
+                    <h2>
+                        {{message}}
+                        <br>
+                        <img src="https://dl.dropboxusercontent.com/u/6938731/gentux-web-assets/maintenance/bow-tie.svg">
+                    </h2>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
