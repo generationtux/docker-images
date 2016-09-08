@@ -1,4 +1,4 @@
-FROM node:4.5-slim
+FROM node:4.5
 
 ENV NODE_ENV=production
 ENV NODE_PORT=80
