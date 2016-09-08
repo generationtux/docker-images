@@ -8,4 +8,4 @@ ADD . /var/www
 RUN cd /var/www && npm install
 
 WORKDIR /var/www
-CMD npm run start
+CMD ["node", "src/index.js"]
