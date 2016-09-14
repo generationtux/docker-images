@@ -1,8 +1,9 @@
-# https://github.com/docker-library/docs/blob/master/php/README.md
-FROM php:5.5.30-fpm
+FROM debian:jessie
 
-# PHP extensions for Laravel
-RUN apt-get update && apt-get install -y libmcrypt-dev mysql-client postgresql-server-dev-9.4 cron
-RUN docker-php-ext-install mcrypt pdo_mysql mbstring pdo_pgsql
+RUN apt-get update && apt-get install -y php5-fpm php5-mcrypt php5-mysql php5-pgsql php5-memcached php5-xdebug && \
+    apt-get clean && apt-get autoremove && \
+    rm -rf /usr/share/locale/* && \
+    rm -rf /var/cache/debconf && mkdir -p /var/cache/debconf && \
+    rm -rf /var/lib/apt/lists/* && mkdir -p /var/lib/apt/lists/partial
 
-WORKDIR /var/www
+CMD ["php-fpm"]
