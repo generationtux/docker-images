@@ -7,7 +7,7 @@ The `latest` tag currently uses PHP 5.6 and ALL different extensions listed belo
 
 Tag | Extensions
 --- | ----------
-5.6 | mcrypt
+5.6 | `mcrypt`
 5.6-mysql | `mcrypt` `pdo_mysql`
 5.6-pgsql | `mcrypt` `pdo_pgsql`
 5.6-mypgsql | `mcrypt` `pdo_mysql` `pdo_pgsql`
