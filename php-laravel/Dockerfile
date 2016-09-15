@@ -6,4 +6,4 @@ RUN apt-get update && apt-get install -y php5-fpm php5-mcrypt php5-mysql php5-pg
     rm -rf /var/cache/debconf && mkdir -p /var/cache/debconf && \
     rm -rf /var/lib/apt/lists/* && mkdir -p /var/lib/apt/lists/partial
 
-CMD ["php-fpm"]
+CMD ["php5-fpm"]
