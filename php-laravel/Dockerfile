@@ -8,4 +8,6 @@ RUN apt-get update && apt-get install -y php5-fpm php5-mcrypt php5-mysql php5-pg
 
 ADD ./php-fpm.conf /etc/php5/fpm/php-fpm.conf
 
+EXPOSE 9000
+
 CMD ["php5-fpm"]
