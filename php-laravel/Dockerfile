@@ -10,4 +10,4 @@ ADD ./php-fpm.conf /etc/php5/fpm/php-fpm.conf
 
 EXPOSE 9000
 
-CMD ["service php5-fpm start"]
+CMD ["php-fpm"]
