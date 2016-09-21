@@ -8,18 +8,12 @@ The PHP image on Docker hub is larger and doesn't include extensions commonly ne
 
 The goal with this image is to provide sensible defaults and extensions while keeping image size as small as possible.
 
-The `latest` tag currently uses PHP 5.6 and ALL different extensions listed below are installed.
+**Versioning**
+`latest` tag currently runs 5.6
 
-Tag | Extensions
---- | ----------
-5.6 | `mcrypt`
-5.6-mysql | `mcrypt` `pdo_mysql`
-5.6-pgsql | `mcrypt` `pdo_pgsql`
-5.6-mypgsql | `mcrypt` `pdo_mysql` `pdo_pgsql`
-5.6-mem | `mcrypt` `memcached`
-5.6-mem-mypgsql | `mcrypt` `memcached` `pdo_mysql` `pdo_pgsql`
+**Extensions**
+`mcrypt` `pdo_mysql` `pdo_pgsql` `memcached` `xdebug`
 
-*Add `-xdebug` to the end of the above tags to get that version + xdebug extension installed*
 
 ### Usage
 
