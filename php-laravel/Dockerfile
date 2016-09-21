@@ -20,6 +20,7 @@ RUN apt-get update && \
     rm -rf /var/cache/debconf && mkdir -p /var/cache/debconf && \
     rm -rf /var/lib/apt/lists/* && mkdir -p /var/lib/apt/lists/partial
 
+ADD ./docker-php-ext-* /usr/local/bin/
 RUN docker-php-ext-install mcrypt pdo_mysql mbstring pdo_pgsql
 
 ADD ./php-fpm.conf /etc/php5/fpm/php-fpm.conf
