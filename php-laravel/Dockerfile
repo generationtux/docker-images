@@ -6,6 +6,8 @@ RUN apt-get update && \
                        curl \
                        libmcrypt-dev \
                        libxml2 \
+                       libedit2 \
+                       libsqlite3-0 \
                        xz-utils \
                        php5-fpm \
                        php5-mcrypt \
