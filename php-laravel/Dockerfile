@@ -8,6 +8,7 @@ RUN apt-get update && \
                        libxml2 \
                        libedit2 \
                        libsqlite3-0 \
+                       sudo \
                        xz-utils \
                        php5-fpm \
                        php5-mcrypt \
