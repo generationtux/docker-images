@@ -15,10 +15,13 @@ RUN apt-get update && \
                        php5-pgsql \
                        php5-memcached \
                        php5-xdebug && \
+                       sudo && \
     apt-get clean && apt-get autoremove && \
     rm -rf /usr/share/locale/* && \
     rm -rf /var/cache/debconf && mkdir -p /var/cache/debconf && \
     rm -rf /var/lib/apt/lists/* && mkdir -p /var/lib/apt/lists/partial
+
+RUN useradd -m docker && echo "docker:docker" | chpasswd && adduser docker sudo
 
 ADD ./docker-php-* /usr/local/bin/
 RUN docker-php-ext-install mcrypt pdo_mysql mbstring pdo_pgsql
