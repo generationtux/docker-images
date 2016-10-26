@@ -14,4 +14,4 @@ ENV PYTHONPATH /var/www
 
 WORKDIR /var/www
 
-ENTRYPOINT ["/var/www/deploy/entrypoint.sh"]
+CMD ["/var/www/deploy/entrypoint.sh"]
