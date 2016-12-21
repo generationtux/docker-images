@@ -8,7 +8,7 @@ RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" &&
     php -r "unlink('composer-setup.php');" && \
     mv composer.phar /usr/local/bin/composer
 RUN apt-get install -y wget
-RUN wget https://github.com/generationtux/par/releases/download/v0.0.1/par_linux_amd64
+RUN wget https://github.com/generationtux/par/releases/download/v0.0.2/par_linux_amd64
 RUN mv par_linux_amd64 par
 RUN chmod +x ./par
 RUN mv ./par /usr/local/bin/
