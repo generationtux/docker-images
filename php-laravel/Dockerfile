@@ -6,7 +6,7 @@ RUN apt-get update && \
     apt-get install -y wget && \
     wget https://www.dotdeb.org/dotdeb.gpg && \
     apt-key add dotdeb.gpg && \
-    apt-get update && apt-get install -y ca-certificates cron curl php7.0-fpm php7.0-curl php7.0-cli php7.0-mcrypt php7.0-mysql php7.0-pgsql php7.0-xml && \
+    apt-get install -y ca-certificates cron curl php7.0-fpm php7.0-curl php7.0-cli php7.0-mcrypt php7.0-mysql php7.0-pgsql php7.0-xml && \
     apt-get clean && apt-get autoremove && \
     rm -rf /usr/share/locale/* && \
     rm -rf /var/cache/debconf && mkdir -p /var/cache/debconf && \
