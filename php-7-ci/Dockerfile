@@ -10,6 +10,5 @@ RUN apt-get update && \
     mv par_linux_amd64 par && \
     chmod +x ./par && \
     mv ./par /usr/local/bin/ && \
-    apt-get autoremove && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
