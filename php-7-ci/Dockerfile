@@ -1,5 +1,10 @@
 FROM php:7-alpine
+
+# Setting COMPOSER_ALLOW_SUPERUSER disables warnings about running composer as
+# the superuser.
+# https://getcomposer.org/doc/03-cli.md#composer-allow-superuser
 ENV COMPOSER_ALLOW_SUPERUSER 1
+
 ADD install_composer.sh /tmp
 RUN apk add --update --no-cache git unzip wget zip && \
     /tmp/install_composer.sh && \
