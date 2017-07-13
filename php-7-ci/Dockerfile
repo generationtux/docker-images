@@ -6,7 +6,7 @@ FROM php:7-alpine
 ENV COMPOSER_ALLOW_SUPERUSER 1
 
 ADD install_composer.sh /tmp
-RUN apk add --update --no-cache autoconf g++ git make unzip wget zip \
+RUN apk add --update --no-cache autoconf g++ git make unzip wget zip mysql-client \
     "libmcrypt-dev" "postgresql-dev" "libpq" && \
     docker-php-ext-install \
         mbstring \
